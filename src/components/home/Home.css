@@ -1,0 +1,40 @@
+.Home {
+    height: 100vh;
+    position: relative;
+}
+
+.dark {
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
+
+#themeButton {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+#displayPage {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 9rem;
+}
+
+#buttonGroups {
+    position: absolute;
+    top: 50%;
+    left: 592px;
+}
+
+#buttonGroups > button {
+    margin-right: 3rem;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#buttonGroups > button:hover {
+    text-decoration: underline;
+}
