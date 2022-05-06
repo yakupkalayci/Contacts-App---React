@@ -1,0 +1,26 @@
+#main {
+    text-align: center;  
+    width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+.formGroup {
+    padding: 10px;
+    text-align: left;
+}
+
+input {
+    padding: 5px 15px;
+    width: 200px;
+}
+
+input#button {
+    width: 70px;
+    font-size: 1rem;
+    border-radius: 6px;
+}

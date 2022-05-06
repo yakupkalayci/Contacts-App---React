@@ -1,6 +1,7 @@
 .Home {
     height: 100vh;
     position: relative;
+    background-color: rgb(235, 235, 235);
 }
 
 .dark {
@@ -17,14 +18,13 @@
 #displayPage {
     width: 80%;
     margin: 0 auto;
-    text-align: center;
     padding-top: 9rem;
 }
 
 #buttonGroups {
-    position: absolute;
-    top: 50%;
-    left: 592px;
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
 }
 
 #buttonGroups > button {
