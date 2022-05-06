@@ -1,5 +1,5 @@
 .Home {
-    height: 100vh;
+    height: 120vh;
     position: relative;
     background-color: rgb(235, 235, 235);
 }
@@ -19,6 +19,10 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 9rem;
+}
+
+h1 {
+    text-align: center;
 }
 
 #buttonGroups {

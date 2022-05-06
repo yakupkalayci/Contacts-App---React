@@ -24,3 +24,20 @@ input#button {
     font-size: 1rem;
     border-radius: 6px;
 }
+
+.alert{
+    margin:20px auto;
+    border-radius:5px;
+    padding: 5px 25px;
+    box-shadow:0 0 15px 5px #ccc;
+    color: white;
+    text-align: left;
+}
+
+.danger {
+    background-color: rgb(137, 0, 0);
+}
+
+.success {
+    background-color: rgb(93, 193, 93);
+}

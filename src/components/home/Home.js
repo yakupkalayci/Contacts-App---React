@@ -12,6 +12,8 @@ function Home() {
 
   const [theme, setTheme] = useState("");
 
+  const [contacts, setContacts] = useState([]);
+
   const handleClick = (e) => {
     setWindowStatus({ addContact: false, showContacts: false });
     setWindowStatus({
@@ -34,7 +36,7 @@ function Home() {
         {windowStatus.showMessage ? (
             <h1>Welcome to the Contacts App!</h1>
         ) : windowStatus.addContact ? (
-          <AddContact />
+          <AddContact contacts={contacts} addContact={setContacts} />
         ) : windowStatus.showContacts ? (
           <ContactList />
         ) : null}
