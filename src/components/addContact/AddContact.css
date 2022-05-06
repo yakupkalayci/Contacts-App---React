@@ -8,6 +8,10 @@ h2 {
     text-align: center;
 }
 
+form {
+    border: 3px solid rgb(0, 119, 255);
+    padding: 15px;
+}
 
 .formGroup {
     padding: 10px;
@@ -29,7 +33,7 @@ input#button {
     margin:20px auto;
     border-radius:5px;
     padding: 5px 25px;
-    box-shadow:0 0 15px 5px #ccc;
+    box-shadow:0 0 10px 5px rgb(146, 146, 146);
     color: white;
     text-align: left;
 }

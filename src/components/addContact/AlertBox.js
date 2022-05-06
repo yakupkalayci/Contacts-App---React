@@ -2,7 +2,6 @@ import React from 'react'
 import  "./AddContact.css";
 
 function AlertBox({type, message}) {
-    console.log(type, message);
   return (
     <div className={`alert ${type}`}>
         <h3>{message}</h3>

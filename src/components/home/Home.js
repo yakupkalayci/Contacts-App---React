@@ -38,7 +38,7 @@ function Home() {
         ) : windowStatus.addContact ? (
           <AddContact contacts={contacts} addContact={setContacts} />
         ) : windowStatus.showContacts ? (
-          <ContactList />
+          <ContactList contacts={contacts} />
         ) : null}
       </div>
       <div id="buttonGroups">
