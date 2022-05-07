@@ -23,7 +23,7 @@ function ContactList({contacts}) {
   else {
     return (
       <div className='main'>
-        <h3>No contacts here!</h3>
+        <h2>No contacts here!</h2>
       </div>
     )
   }

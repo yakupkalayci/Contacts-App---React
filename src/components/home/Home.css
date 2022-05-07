@@ -1,12 +1,6 @@
 .Home {
     height: 120vh;
-    position: relative;
     background-color: rgb(235, 235, 235);
-}
-
-.dark {
-    background-color: rgb(28, 28, 28);
-    color: white;
 }
 
 #themeButton {
@@ -17,7 +11,7 @@
 
 #displayPage {
     width: 80%;
-    margin: 0 auto;
+    margin: -40px auto;
     padding-top: 9rem;
 }
 
@@ -41,4 +35,41 @@ h1 {
 
 #buttonGroups > button:hover {
     text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid rgb(0, 119, 255);
+}
+
+#menu {
+    display: flex;
+    margin-right: 150px;
+}
+
+#menu > li {
+    background-color: initial;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#button {
+    position: relative;
+}
+
+#button > button {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    border-radius: 16px;
+    padding: 5px 15px;
+}
+
+.dark {
+    background-color: rgb(28, 28, 28);
+    color: white;
 }

@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import Header from "../header/Header";
 import AddContact from "../addContact/AddContact";
 import ContactList from "../contactList/ContactList";
 import "./Home.css";
@@ -12,6 +13,11 @@ function Home() {
 
   const [theme, setTheme] = useState("");
 
+  const changeTheme = () => {
+      setTheme(theme === "dark" ? "light" : "dark");
+  }
+
+
   const [contacts, setContacts] = useState([]);
 
   const handleClick = (e) => {
@@ -21,33 +27,16 @@ function Home() {
     });
   };
 
-  const changeTheme = () => {
-      setTheme(theme === "dark" ? "light" : "dark");
-  }
 
   return (
     <div className={`Home ${theme}`}>
-        <div id="themeButton">
-            <button onClick={() => changeTheme()}>
-                {theme === "dark" ? "Light" : "Dark"}
-            </button>
-        </div>
+      <Header theme={theme} changeTheme={changeTheme} windowStatus={windowStatus} setWindowStatus={setWindowStatus}/>
       <div id="displayPage">
-        {windowStatus.showMessage ? (
-            <h1>Welcome to the Contacts App!</h1>
-        ) : windowStatus.addContact ? (
+        {windowStatus.addContact ? (
           <AddContact contacts={contacts} addContact={setContacts} />
         ) : windowStatus.showContacts ? (
           <ContactList contacts={contacts} />
-        ) : null}
-      </div>
-      <div id="buttonGroups">
-        <button name="addContact" onClick={handleClick}>
-          Add Contact
-        </button>
-        <button name="showContacts" onClick={handleClick}>
-          Show Contacts
-        </button>
+        ) : <h1>Welcome to the Contacts App!</h1>}
       </div>
     </div>
   );
