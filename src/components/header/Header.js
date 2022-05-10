@@ -2,8 +2,6 @@
 function Header({theme ,changeTheme, windowStatus, setWindowStatus}) {
 
     const handleClick = (e) => {
-        console.log(windowStatus.addContact);
-
         
         setWindowStatus({ addContact: false, showContacts: false });
         setWindowStatus({

@@ -1,5 +1,5 @@
 .Home {
-    height: 120vh;
+    height: 100vh;
     background-color: rgb(235, 235, 235);
 }
 
@@ -67,6 +67,7 @@ header {
     right: 0;
     border-radius: 16px;
     padding: 5px 15px;
+    cursor: pointer;
 }
 
 .dark {

@@ -2,6 +2,7 @@
     width: 400px;
     margin: 0 auto;
     font-weight: bold;
+    overflow: auto;
 }
 
 ul {
@@ -21,4 +22,9 @@ li:nth-child(2n-1) {
 
 li:nth-child(2n) {
     background-color: rgb(187, 187, 187);
+}
+
+#deleteBtn {
+    cursor: pointer;
+    font-size: 20px;
 }

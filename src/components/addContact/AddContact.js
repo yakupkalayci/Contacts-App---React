@@ -1,11 +1,13 @@
 import { useState } from "react";
 import AlertBox from "./AlertBox";
+import { generateID } from '../../utils/utils';
 import "./AddContact.css";
 
 function AddContact({ contacts, addContact }) {
   const [contactInfos, setContactInfos] = useState({
     name: "",
     phoneNumber: "",
+    id:generateID()
   });
 
   const [alert, setAlert] = useState({show:false, type:"", message:""});
@@ -15,7 +17,7 @@ function AddContact({ contacts, addContact }) {
 
     if(contactInfos.name && contactInfos.phoneNumber) {
       addContact([...contacts, contactInfos]);
-      setContactInfos({ name: "", phoneNumber: "" });
+      setContactInfos({ name: "", phoneNumber: "", id:generateID() });
 
       setAlert({show:true, type:"success", message:"Successfully added!"});
       setTimeout(() => {
