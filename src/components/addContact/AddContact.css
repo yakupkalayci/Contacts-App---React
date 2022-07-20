@@ -2,6 +2,9 @@
     text-align: center;  
     width: 400px;
     margin: 0 auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 
 h2 {
@@ -10,22 +13,42 @@ h2 {
 
 form {
     padding: 15px;
+    margin-top: 1rem;
 }
 
 .formGroup {
     padding: 10px;
-    text-align: left;
+}
+
+.formGroup > label {
+    float: left;
+    padding-bottom: 5px;
 }
 
 input {
     padding: 5px 15px;
-    width: 200px;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 16px;
+}
+
+.formGroup:last-child {
+    text-align: left;
 }
 
 input#button {
-    width: 70px;
-    font-size: 1rem;
-    border-radius: 6px;
+    width: 80px;
+    font-size: 1.2rem;
+    border-radius: 16px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    border: 1px solid rgb(0, 119, 255);
+}
+
+input#button:hover {
+    color: rgb(0, 119, 255);
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(0, 119, 255);
 }
 
 .alert{

@@ -2,7 +2,7 @@ import React from 'react';
 import "./ContactList.css";
 import { BiNoEntry } from "react-icons/bi"; 
 
-function ContactList({contacts, setContacts}) {
+function ContactList({contacts, setContacts, theme}) {
 
   const handleDelete = (e) => {
 
@@ -33,7 +33,12 @@ function ContactList({contacts, setContacts}) {
     return (
       <div className='main'>
         <h2>Contacts</h2>
-        <ul >
+        <ul className='contactList'>
+        <li style={theme === "light" ? {color:"white"} : {color:"black"}}>
+          <span>Name</span>
+          <span>Number</span>
+          <span>Delete</span>
+        </li>
         {
           contacts.map(item => (
             <li key={item.id}>

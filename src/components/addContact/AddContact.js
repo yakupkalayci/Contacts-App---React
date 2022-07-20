@@ -3,7 +3,7 @@ import AlertBox from "./AlertBox";
 import { generateID } from '../../utils/utils';
 import "./AddContact.css";
 
-function AddContact({ contacts, addContact }) {
+function AddContact({ contacts, addContact, theme }) {
   const [contactInfos, setContactInfos] = useState({
     name: "",
     phoneNumber: "",
@@ -40,8 +40,8 @@ function AddContact({ contacts, addContact }) {
   };
 
   return (
-    <div id="main">
-      <h2>Add new contact!</h2>
+    <div id="main" style={theme === "dark" ? {backgroundColor:"rgb(62,62,62)"} : {backgroundColor:"inherit"}}>
+      <h2>Add New Contact</h2>
       <form onSubmit={handleSubmit}>
         <div className="formGroup">
           <label htmlFor="name">Name:</label> <br />

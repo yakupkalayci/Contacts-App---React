@@ -10,7 +10,7 @@ function Header({theme ,changeTheme, windowStatus, setWindowStatus}) {
     }
 
   return (
-    <header>
+    <header className={theme}>
         <div id='logo'>
             <h1>ContactsAPP</h1>
         </div>

@@ -2,12 +2,14 @@
     width: 400px;
     margin: 0 auto;
     font-weight: bold;
-    overflow: auto;
+    padding-bottom: 2rem;
 }
 
-ul {
-    list-style-type: none;
-    padding: 10px;
+ul.contactList {
+    padding-left: 0;
+    margin-top: 1rem;
+    border-radius: 18px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 li {

@@ -1,6 +1,9 @@
 .Home {
-    height: 100vh;
-    background-color: rgb(235, 235, 235);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #themeButton {
@@ -11,8 +14,15 @@
 
 #displayPage {
     width: 80%;
-    margin: -40px auto;
-    padding-top: 9rem;
+}
+
+.greetingMessage > p {
+    text-align: center;
+    font-weight: 350;
+}
+
+#logo > h1:hover {
+    cursor: pointer;
 }
 
 h1 {
@@ -39,10 +49,14 @@ h1 {
 
 header {
     display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-bottom: 1px solid rgb(0, 119, 255);
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 3px solid rgb(0, 119, 255);
+    background-color: rgb(248, 248, 248);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #menu {
@@ -57,20 +71,14 @@ header {
     font-weight: 500;
 }
 
-#button {
-    position: relative;
-}
-
 #button > button {
-    position: absolute;
-    top: 40px;
-    right: 0;
     border-radius: 16px;
-    padding: 5px 15px;
+    padding: 7px 20px;
+    margin-right: 1rem;
     cursor: pointer;
 }
 
 .dark {
-    background-color: rgb(28, 28, 28);
+    background-color: rgb(46, 46, 46);
     color: white;
 }
