@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import Header from "../header/Header";
 import AddContact from "../addContact/AddContact";
 import ContactList from "../contactList/ContactList";
@@ -18,10 +18,21 @@ function Home() {
       setTheme(theme === "dark" ? "light" : "dark");
   }
 
+  const initialState = [];
 
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(initialState);
 
+  useEffect(() => {
+    if(localStorage.getItem("contacts")) {
+      setContacts(JSON.parse(localStorage.getItem("contacts")));
+    }
+  }, []);
 
+  useEffect(() => {
+    if(contacts !== initialState) {
+      localStorage.setItem("contacts", JSON.stringify(contacts));
+    }
+  }, [contacts]);
 
   return (
     <div className={`Home ${theme}`}>
