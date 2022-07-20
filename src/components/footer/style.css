@@ -21,14 +21,11 @@ p:first-child > a {
     color: rgb(0, 119, 255);
 }
 
-p:first-child > a:hover {
-    text-decoration: underline;
-}
 
 p:last-child > a {
     font-weight: bold;
 }
 
-p:last-child > a:hover {
+a:hover {
     text-decoration: underline;
 }

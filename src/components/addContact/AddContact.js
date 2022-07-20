@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AlertBox from "./AlertBox";
-import { generateID } from '../../utils/utils';
+import { generateID, checkIsUnique } from '../../utils/utils';
 import "./AddContact.css";
 
 function AddContact({ contacts, addContact, theme }) {
@@ -15,14 +15,23 @@ function AddContact({ contacts, addContact, theme }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(contactInfos.name && contactInfos.phoneNumber) {
-      addContact([...contacts, contactInfos]);
-      setContactInfos({ name: "", phoneNumber: "", id:generateID() });
 
-      setAlert({show:true, type:"success", message:"Successfully added!"});
-      setTimeout(() => {
-        setAlert({...alert, show:false});
-      }, 2000);
+    if(contactInfos.name && contactInfos.phoneNumber) {
+      
+      if(checkIsUnique(contacts, contactInfos) === -1) {
+        addContact([...contacts, contactInfos]);
+        setContactInfos({ name: "", phoneNumber: "", id:generateID() });
+  
+        setAlert({show:true, type:"success", message:"Successfully added!"});
+        setTimeout(() => {
+          setAlert({...alert, show:false});
+        }, 2000);
+      } else {
+        setAlert({show:true, type:"danger", message:"Name and phone number must be different from your contacts!"});
+        setTimeout(() => {
+          setAlert({...alert, show:false});
+        }, 4000);
+      }
     } else {
       setAlert({show:true, type:"danger", message:"Inputs can't be left!"});
       setTimeout(() => {
