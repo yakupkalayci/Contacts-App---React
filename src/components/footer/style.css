@@ -10,9 +10,9 @@ footer {
     text-align: center;
 }
 
-p {
-    margin: 0;
+footer > p {
     padding: 0;
+    margin: 0;
 }
 
 p:first-child > a {
@@ -28,4 +28,13 @@ p:last-child > a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding-bottom: 2rem;
+    }
+    footer > p {
+        text-align: left;
+    }
 }
